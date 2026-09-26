@@ -69,8 +69,8 @@ def create_patient(patient: patient):
             )
 
     patients.append(patient_data)
+    save_patients()
     return patient_data
-
 
 @app.put("/patients/{patient_id}")
 def update_patient(patient_id: str, patient: patient):
@@ -79,7 +79,8 @@ def update_patient(patient_id: str, patient: patient):
 
     for existing_patient in patients:
         if existing_patient["patient_id"] == patient_id:
-            existing_patient.update(patient_data)                            #python build-in function
+            existing_patient.update(patient_data) 
+            save_patients()                           #python build-in function
             return existing_patient
 
     raise HTTPException(
@@ -96,6 +97,7 @@ def update_patient_partial(patient_id: str, patient: patient_update):
         if p["patient_id"] == patient_id:
 
             p.update(patient_data)
+            save_patients()
 
             return p
 
@@ -110,6 +112,7 @@ def delete_patient(patient_id: str):
     for p in patients:
         if p["patient_id"] == patient_id:
             patients.remove(p)
+            save_patients()
             return {
                 "message": "Patient deleted successfully"
             }
@@ -118,3 +121,8 @@ def delete_patient(patient_id: str):
         status_code=404,
         detail="Patient not found"
     )
+
+
+def save_patients():
+    with open("patients.json", "w") as file:
+        json.dump(patients, file, indent=4)

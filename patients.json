@@ -1,92 +1,92 @@
 [
-  {
-    "patient_id": "P001",
-    "name": "Alice Smith",
-    "age": 29,
-    "gender": "Female",
-    "blood_group": "A+",
-    "diagnosis": "Seasonal Allergies",
-    "admitted": false
-  },
-  {
-    "patient_id": "P002",
-    "name": "Bob Jones",
-    "age": 45,
-    "gender": "Male",
-    "blood_group": "O-",
-    "diagnosis": "Hypertension",
-    "admitted": true
-  },
-  {
-    "patient_id": "P003",
-    "name": "Charlie Brown",
-    "age": 34,
-    "gender": "Male",
-    "blood_group": "B+",
-    "diagnosis": "Fractured Wrist",
-    "admitted": false
-  },
-  {
-    "patient_id": "P004",
-    "name": "Diana Prince",
-    "age": 31,
-    "gender": "Female",
-    "blood_group": "AB+",
-    "diagnosis": "Migraine",
-    "admitted": false
-  },
-  {
-    "patient_id": "P005",
-    "name": "Ethan Wilson",
-    "age": 52,
-    "gender": "Male",
-    "blood_group": "A-",
-    "diagnosis": "Diabetes",
-    "admitted": true
-  },
-  {
-    "patient_id": "P006",
-    "name": "Emma Davis",
-    "age": 26,
-    "gender": "Female",
-    "blood_group": "O+",
-    "diagnosis": "Asthma",
-    "admitted": false
-  },
-  {
-    "patient_id": "P007",
-    "name": "Frank Miller",
-    "age": 67,
-    "gender": "Male",
-    "blood_group": "B-",
-    "diagnosis": "Pneumonia",
-    "admitted": true
-  },
-  {
-    "patient_id": "P008",
-    "name": "Grace Taylor",
-    "age": 41,
-    "gender": "Female",
-    "blood_group": "A+",
-    "diagnosis": "Back Pain",
-    "admitted": false
-  },
-  {
-    "patient_id": "P009",
-    "name": "Henry Anderson",
-    "age": 38,
-    "gender": "Male",
-    "blood_group": "O+",
-    "diagnosis": "Gastritis",
-    "admitted": false
-  },
-  {
-    "patient_id": "P010",
-    "name": "Sophia Martin",
-    "age": 56,
-    "gender": "Female",
-    "blood_group": "AB-",
-    "diagnosis": "Arthritis",
-    "admitted": true
-  }
+    {
+        "patient_id": "P001",
+        "name": "Rahul",
+        "age": 45,
+        "gender": "Male",
+        "blood_group": "O-",
+        "diagnosis": "Diabetes",
+        "admitted": false
+    },
+    {
+        "patient_id": "P002",
+        "name": "Bob Jones",
+        "age": 45,
+        "gender": "Male",
+        "blood_group": "O-",
+        "diagnosis": "Hypertension",
+        "admitted": true
+    },
+    {
+        "patient_id": "P003",
+        "name": "Charlie Brown",
+        "age": 34,
+        "gender": "Male",
+        "blood_group": "B+",
+        "diagnosis": "Fractured Wrist",
+        "admitted": false
+    },
+    {
+        "patient_id": "P004",
+        "name": "Diana Prince",
+        "age": 31,
+        "gender": "Female",
+        "blood_group": "AB+",
+        "diagnosis": "Migraine",
+        "admitted": false
+    },
+    {
+        "patient_id": "P005",
+        "name": "Ethan Wilson",
+        "age": 52,
+        "gender": "Male",
+        "blood_group": "A-",
+        "diagnosis": "Diabetes",
+        "admitted": true
+    },
+    {
+        "patient_id": "P006",
+        "name": "Emma Davis",
+        "age": 26,
+        "gender": "Female",
+        "blood_group": "O+",
+        "diagnosis": "Asthma",
+        "admitted": false
+    },
+    {
+        "patient_id": "P007",
+        "name": "Frank Miller",
+        "age": 67,
+        "gender": "Male",
+        "blood_group": "B-",
+        "diagnosis": "Pneumonia",
+        "admitted": true
+    },
+    {
+        "patient_id": "P008",
+        "name": "Grace Taylor",
+        "age": 41,
+        "gender": "Female",
+        "blood_group": "A+",
+        "diagnosis": "Back Pain",
+        "admitted": false
+    },
+    {
+        "patient_id": "P009",
+        "name": "Henry Anderson",
+        "age": 38,
+        "gender": "Male",
+        "blood_group": "O+",
+        "diagnosis": "Gastritis",
+        "admitted": false
+    },
+    {
+        "patient_id": "P010",
+        "name": "Sophia Martin",
+        "age": 56,
+        "gender": "Female",
+        "blood_group": "AB-",
+        "diagnosis": "Arthritis",
+        "admitted": true
+    }
 ]
