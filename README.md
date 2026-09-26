@@ -49,40 +49,45 @@ Patient data is validated using Pydantic models.
 
 For example, the patient's age is restricted to a valid range:
 
-```markdown
 ```python
 age: int = Field(..., ge=0, le=120)
+```
 
 Invalid data such as an incorrect type, missing required field, or an invalid age results in a validation error.
 
-The API also checks for duplicate patient IDs and returns a 409 Conflict response when a duplicate ID is submitted.
+The API also checks for duplicate patient IDs and returns a `409 Conflict` response when a duplicate ID is submitted.
 
 ## Error Handling
 
-The API uses FastAPI's HTTPException for API errors.
+The API uses FastAPI's `HTTPException` for API errors.
 
 Examples:
 
-404 Not Found - Patient does not exist
-409 Conflict - Patient ID already exists
-422 Unprocessable Entity - Request validation failed
+- `404 Not Found` - Patient does not exist
+- `409 Conflict` - Patient ID already exists
+- `422 Unprocessable Entity` - Request validation failed
 
 ## Data Persistence
 
-Patient records are stored in patients.json.
+Patient records are stored in `patients.json`.
 
 The application loads the data when the server starts:
 
+```python
 patients = json.load(file)
+```
 
 After a successful POST, PUT, PATCH, or DELETE operation, the updated data is written back to the JSON file using:
 
+```python
 json.dump(patients, file, indent=4)
+```
 
 This allows changes to remain available after restarting the server.
 
 ## Project Structure
 
+```text
 FastAPI-Learning/
 │
 ├── main.py
@@ -90,60 +95,104 @@ FastAPI-Learning/
 ├── patients.json
 ├── .gitignore
 └── README.md
+```
 
 ## How to Run
 
-1. Clone the repository
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/nausheenara56-ops/FastAPI-Learning.git
+```
 
-2. Navigate to the project
+### 2. Navigate to the project
+
+```bash
 cd FastAPI-Learning
+```
 
-3. Install dependencies
+### 3. Install dependencies
+
+```bash
 python -m pip install fastapi uvicorn
+```
 
-4. Start the server
+### 4. Start the server
+
+```bash
 python -m uvicorn main:app --reload
+```
 
-5. Open the API documentation
+### 5. Open the API documentation
 
 Open the following URL in your browser:
 
+```text
 http://127.0.0.1:8000/docs
+```
 
 Swagger UI can be used to test all API endpoints interactively.
 
+## Example Request
+
+### Create a Patient
+
+```json
+{
+  "patient_id": "P011",
+  "name": "John Doe",
+  "age": 35,
+  "gender": "Male",
+  "blood_group": "B+",
+  "diagnosis": "Diabetes",
+  "admitted": false
+}
+```
+
+### Partial Update
+
+PATCH can be used when only selected fields need to be changed.
+
+For example:
+
+```json
+{
+  "age": 36
+}
+```
 
 ## What I Learned
 
 Through this project, I practiced:
 
--Designing REST API endpoints
--Working with HTTP methods
--Path and query parameters
--Request body validation
--Pydantic models
--HTTP status codes and exception handling
--CRUD operations
--PUT vs PATCH
--JSON data persistence
--Testing APIs using Swagger UI
--Git and GitHub workflow
+- Designing REST API endpoints
+- Working with HTTP methods
+- Path and query parameters
+- Request body validation
+- Pydantic models
+- HTTP status codes and exception handling
+- CRUD operations
+- PUT vs PATCH
+- JSON data persistence
+- Testing APIs using Swagger UI
+- Git and GitHub workflow
 
 ## Future Improvements
 
 Possible future improvements include:
 
--Database integration using SQLite/PostgreSQL
--SQLAlchemy integration
--Authentication and authorization
--Automated API testing
--Better project modularization
--Dockerization
--Deployment to a cloud platform
+- Database integration using SQLite/PostgreSQL
+- SQLAlchemy integration
+- Authentication and authorization
+- Automated API testing
+- Better project modularization
+- Dockerization
+- Deployment to a cloud platform
 
-##Project Status
+## Project Status
 
 Completed as a hands-on FastAPI learning project.
 
 The project may be extended with database integration, testing, authentication, and deployment as part of continued learning.
+
+
