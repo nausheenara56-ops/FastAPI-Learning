@@ -49,6 +49,7 @@ Patient data is validated using Pydantic models.
 
 For example, the patient's age is restricted to a valid range:
 
+```markdown
 ```python
 age: int = Field(..., ge=0, le=120)
 
@@ -56,7 +57,7 @@ Invalid data such as an incorrect type, missing required field, or an invalid ag
 
 The API also checks for duplicate patient IDs and returns a 409 Conflict response when a duplicate ID is submitted.
 
-Error Handling
+## Error Handling
 
 The API uses FastAPI's HTTPException for API errors.
 
@@ -66,7 +67,7 @@ Examples:
 409 Conflict - Patient ID already exists
 422 Unprocessable Entity - Request validation failed
 
-Data Persistence
+## Data Persistence
 
 Patient records are stored in patients.json.
 
@@ -80,7 +81,8 @@ json.dump(patients, file, indent=4)
 
 This allows changes to remain available after restarting the server.
 
-Project Structure
+## Project Structure
+
 FastAPI-Learning/
 │
 ├── main.py
@@ -89,7 +91,8 @@ FastAPI-Learning/
 ├── .gitignore
 └── README.md
 
-How to Run
+## How to Run
+
 1. Clone the repository
 git clone https://github.com/nausheenara56-ops/FastAPI-Learning.git
 
@@ -111,26 +114,6 @@ http://127.0.0.1:8000/docs
 Swagger UI can be used to test all API endpoints interactively.
 
 
-Example Request
-Create a Patient
-{
-  "patient_id": "P011",
-  "name": "John Doe",
-  "age": 35,
-  "gender": "Male",
-  "blood_group": "B+",
-  "diagnosis": "Diabetes",
-  "admitted": false
-}
-Partial Update
-
-PATCH can be used when only selected fields need to be changed.
-
-For example:
-
-{
-  "age": 36
-}
 ## What I Learned
 
 Through this project, I practiced:
@@ -159,7 +142,7 @@ Possible future improvements include:
 -Dockerization
 -Deployment to a cloud platform
 
-## Project Status
+##Project Status
 
 Completed as a hands-on FastAPI learning project.
 
