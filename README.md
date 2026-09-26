@@ -131,33 +131,35 @@ For example:
 {
   "age": 36
 }
-What I Learned
+## What I Learned
 
 Through this project, I practiced:
 
-Designing REST API endpoints
-Working with HTTP methods
-Path and query parameters
-Request body validation
-Pydantic models
-HTTP status codes and exception handling
-CRUD operations
-PUT vs PATCH
-JSON data persistence
-Testing APIs using Swagger UI
-Git and GitHub workflow
-Future Improvements
+-Designing REST API endpoints
+-Working with HTTP methods
+-Path and query parameters
+-Request body validation
+-Pydantic models
+-HTTP status codes and exception handling
+-CRUD operations
+-PUT vs PATCH
+-JSON data persistence
+-Testing APIs using Swagger UI
+-Git and GitHub workflow
+
+## Future Improvements
 
 Possible future improvements include:
 
-Database integration using SQLite/PostgreSQL
-SQLAlchemy integration
-Authentication and authorization
-Automated API testing
-Better project modularization
-Dockerization
-Deployment to a cloud platform
-Project Status
+-Database integration using SQLite/PostgreSQL
+-SQLAlchemy integration
+-Authentication and authorization
+-Automated API testing
+-Better project modularization
+-Dockerization
+-Deployment to a cloud platform
+
+## Project Status
 
 Completed as a hands-on FastAPI learning project.
 
