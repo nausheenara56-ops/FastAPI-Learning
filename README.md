@@ -65,6 +65,7 @@ Examples:
 404 Not Found - Patient does not exist
 409 Conflict - Patient ID already exists
 422 Unprocessable Entity - Request validation failed
+
 Data Persistence
 
 Patient records are stored in patients.json.
@@ -87,15 +88,20 @@ FastAPI-Learning/
 ├── patients.json
 ├── .gitignore
 └── README.md
+
 How to Run
 1. Clone the repository
 git clone https://github.com/nausheenara56-ops/FastAPI-Learning.git
+
 2. Navigate to the project
 cd FastAPI-Learning
+
 3. Install dependencies
 python -m pip install fastapi uvicorn
+
 4. Start the server
 python -m uvicorn main:app --reload
+
 5. Open the API documentation
 
 Open the following URL in your browser:
@@ -103,6 +109,7 @@ Open the following URL in your browser:
 http://127.0.0.1:8000/docs
 
 Swagger UI can be used to test all API endpoints interactively.
+
 
 Example Request
 Create a Patient
